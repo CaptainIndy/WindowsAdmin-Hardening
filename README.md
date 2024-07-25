@@ -25,6 +25,7 @@ A few notes about LLMNR:
   In my Windows Server machine, I created a Group Policy Object that prevents my domain-joined Windows machine from using LLMNR.
   <img width="510" alt="GPOs" src="https://github.com/user-attachments/assets/7bf260bc-696e-4143-9125-3bb087b8e9ea">
 
+
 **Task 2: Create a GPO - Account Lockout**
 For security and compliance reasons, I needed to implement an account lockout policy on my Windows workstation. An account lockout disables access to an account for a set period of time after a specific number of failed login attempts. This policy defends against brute-force attacks, in which attackers can enter a million passwords in just a few minutes.
 
@@ -34,7 +35,8 @@ Within my nested Windows Server machine, I created another GPO focused on an acc
 
 <img width="526" alt="Account-Lockout-Policies" src="https://github.com/user-attachments/assets/617bb224-7a32-437d-ab7c-29d1f9c4c8f5">
 
-** Task 3: Create a GPO - Enabling Verbose PowerShell Logging and Transcription**
+
+**Task 3: Create a GPO - Enabling Verbose PowerShell Logging and Transcription**
 
 In this task, I am going to use a PowerShell practice that is recommended regardless of whether PowerShell is enabled or disabled: enabling enhanced PowerShell logging and visibility through verbosity. Best practices for enabling or disabling PowerShell are debated. This often leads to the solution of allowing only certain applications to run. This is why this option is better. 
 
@@ -50,6 +52,7 @@ Important steps to follow in the proper Windows Powershell policy Group Policy M
   - Lastly, The next time I log in to your Windows 10 machine, I will want to run gpupdate. Then launch a new PowerShell window and run a script. Here we will see verbose PowerShell logs created in the Windows 10 machine directory for the user that ran the script: C:\Users&lt;user&gt;\Documents.
     
 <img width="491" alt="Windows-PowerShell-Policies" src="https://github.com/user-attachments/assets/eef35276-72e1-409b-b263-998ea36da557">
+
 
 
 **Task 4: Create a Script - Enumerate Access Control Lists**
