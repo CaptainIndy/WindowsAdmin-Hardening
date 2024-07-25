@@ -1,5 +1,7 @@
 # WindowsAdmin-Hardening
-Windows Administration and Hardening
+**Windows Administration and Hardening**
+
+
 **Summary**
 
 This project will go over common actions taken by a Windows Administrator to harden the system. We will be diving into creating domain-hardening Group Policy Objects as well as reviewing some PowerShell fundamentals Before we begin, keep in mind that there will be two different Windows VMs used here that are both being nestled inside an Azure Windows RDP Host Machine. The main Windows 10 Server will mimic the main server used to administer all the group policies. The other Windows 10 VM will be used to mimic a user on the server's domain. 
