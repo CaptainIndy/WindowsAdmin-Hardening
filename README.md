@@ -59,6 +59,18 @@ Important steps to follow in the proper Windows Powershell policy Group Policy M
 
 **Task 4: Create a Script - Enumerate Access Control Lists**
 
+In Windows, access to files and directories are managed by Access Control Lists (ACLs). These identify which entities (known as security principals), such as users and groups, can access which resources. ACLs use security identifers to manage which principals can access which resources.
+
+For this task, I will be working within my nested Windows 10 machine and creating a PowerShell script that will enumerate the Access Control List of each file or subdirectory within the current working directory.
+
+To test this script I moved to a directory in (cd C:\Windows), and ran C:\Users\sysadmin\Documents\enum_acls.ps1 (enter the full path and your file name).
+Here we will see the ACL output of each file or subdirectory where you ran the script from. This is my script
+
+<img width="296" alt="enum_acls ps1" src="https://github.com/user-attachments/assets/2cd21405-26ae-4e58-8682-1c7e43008119">
+
+Lastly, we will verify my PowerShell Logging GPO by running "gpupdate" in an administrative PowerShell window to pull the latest Active Directory changes. Then I will close and relaunch PowerShell into an Administrative session and navigate to a directory that we want to see the ACLs in. I ran my script, enum_acls.ps1 in my C:\Windows directory. I will be able to see the logs in C:\Users\sysadmin\Documents.
+
+There should be a directory with the current date (for example, 20200908) as the directory name. The new transcribed PowerShell logs should be inside.
 
 
 
